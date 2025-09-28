@@ -1,0 +1,13 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Créer un nouveau groupe</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Créer le groupe</button>
+</form>
+<a href="{% url 'band-list' %}">Retour à tous les groupes</a>
+
+{% endblock %}

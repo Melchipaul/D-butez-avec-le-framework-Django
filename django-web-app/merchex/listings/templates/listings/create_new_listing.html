@@ -1,0 +1,13 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Créer une nouvelle annonce</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Créer l'annonce</button>
+</form>
+<a href="{% url 'listing-list' %}">Retour à toutes les annonces</a>
+
+{% endblock %}
