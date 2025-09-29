@@ -3,12 +3,15 @@
 <h2>{{ listing.title }}</h2>
 
 <ul>
-  <li>Prix : {{ listing.price }}</li>
-  <li>Localisation : {{ listing.location }}</li>
-  <li>Date de publication : {{ listing.date_published }}</li>
+  <li>Titre : {{ listing.title }}</li>
+  <li>Description : {{ listing.description }}</li>
+  <li>Année : {{ listing.year }}</li>
+  <li>Type : {{ listing.type }}</li>
+  <li>Band : {{ listing.band.name }}</li>
+  <li>Active : {{ listing.active|yesno }}</li>
 </ul>
 
-<p>{{ listing.description }}</p>
+<a href="{% url 'listing-update' listing.id %}">Modifier cette annonce</a>
 
 <a href="{% url 'listing-list' %}">Retour à toutes les annonces</a>
 
